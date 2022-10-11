@@ -1,0 +1,1 @@
+export { EcranPrincipal } from './EcranPrincipal';

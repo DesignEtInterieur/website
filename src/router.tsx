@@ -1,10 +1,19 @@
 
 import React from 'react';
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, Navigate } from "react-router-dom";
+import { EcranPrincipal } from './presentation';
 
 export const router = createBrowserRouter([
     {
         path: "/",
-        element: <div>Hello world!</div>,
+        element: <Navigate to="/fr" replace />
+    },
+    {
+        path: "/:lang",
+        element: <EcranPrincipal />
+    },
+    {
+        path: "*",
+        element: <Navigate to="/" replace />
     }
 ])
