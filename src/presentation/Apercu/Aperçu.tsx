@@ -1,6 +1,7 @@
-import { Avatar, Box } from '@mui/material';
+import { Box } from '@mui/material';
 import React from 'react';
 import Carousel from 'react-material-ui-carousel';
+import { Banner } from './Banner';
 
 const slideImages = [
     'images/meuble.jpeg',
@@ -28,28 +29,7 @@ export const Apercu = () => (
                 height: '100vh',
                 flexDirection: 'column'
             }}>
-                <Box sx={{
-                    backgroundImage: 'url(logo.png)',
-                    backgroundPosition: 'center',
-                    backgroundSize: 'contain',
-                    backgroundRepeat: 'no-repeat',
-                    backgroundColor: '#aaaeaf',
-                    flexDirection: 'row',
-                    height: '15vh',
-                    boxShadow: 3,
-                    opacity: .9
-                }}>
-                    <Avatar
-                        alt="Olivier ARNAUD-BOUR"
-                        src="/olivier.jpg"
-                        sx={{ 
-                            width: '15vh', 
-                            height: '15vh',
-                            boxShadow: 3,
-                            opacity: .9
-                         }}
-                    />
-                </Box>
+                <Banner />
             </Box>
         )}
     </Carousel>

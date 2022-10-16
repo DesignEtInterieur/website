@@ -6,15 +6,3 @@
     width: max-content;
     height: max-content;
 }
-
-.banner {
-    position: fixed;
-    inset: 0 auto auto 0;
-    width: 100vw;
-    height: 15vh;
-    background-color: #777777;
-    background-image: url(/logo.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    z-index: 1000;
-}
