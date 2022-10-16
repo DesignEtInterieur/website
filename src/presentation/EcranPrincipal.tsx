@@ -1,8 +1,12 @@
+import { Stack } from '@mui/material';
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { Apercu } from './Apercu';
 
 export const EcranPrincipal = () => {
-    let { lang } = useParams<"lang">();
 
-    return <span>Langue choisie : {lang}</span>;
+    return (
+        <Stack spacing={2}>
+            <Apercu />
+        </Stack>
+    )
 };
