@@ -1,7 +1,8 @@
-import { Box } from '@mui/material';
 import React from 'react';
+import { Box } from '@mui/material';
 import Carousel from 'react-material-ui-carousel';
 import { Banner } from './Banner';
+import { FirstDescriptionCard } from './FirstDescriptionCard';
 
 const slideImages = [
     'images/meuble.jpeg',
@@ -27,9 +28,12 @@ export const Apercu = () => (
                 backgroundSize: 'cover',
                 width: '100vw',
                 height: '100vh',
-                flexDirection: 'column'
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'space-between'
             }}>
                 <Banner />
+                <FirstDescriptionCard />
             </Box>
         )}
     </Carousel>
