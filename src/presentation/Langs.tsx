@@ -31,7 +31,8 @@ export const Langs = () => {
             display: 'flex',
             flexDirection: 'row',
             height: '15vh',
-            opacity: .9
+            opacity: .9,
+            padding: '1vh'
         }}>
             {
                 availableLangs.filter(t => t !== lang).map(item => (

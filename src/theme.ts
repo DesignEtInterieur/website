@@ -1,4 +1,5 @@
-import createTheme, { Theme, ThemeOptions } from "@mui/material/styles/createTheme";
+import { createTheme, responsiveFontSizes, Theme, ThemeOptions } from "@mui/material";
+
 
 const themeOptions: ThemeOptions = {
   palette: {
@@ -9,6 +10,17 @@ const themeOptions: ThemeOptions = {
       main: '#777777',
     },
   },
+  typography: {
+    h6: {
+      fontSize: '1rem',
+      '@media (min-width:1980px)': {
+        fontSize: '1.8rem',
+      },
+      '@media (min-width:3840px)': {
+        fontSize: '3rem',
+      }
+    }
+  }
 };
 
-export const theme: Theme = createTheme(themeOptions);
+export const theme: Theme = responsiveFontSizes(createTheme(themeOptions));

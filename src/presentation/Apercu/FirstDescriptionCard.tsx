@@ -9,7 +9,7 @@ export const FirstDescriptionCard = () => (
     <Card sx={{
         alignSelf: 'center',
         width: '80vw',
-        height: '30vh',
+        minHeight: '30vh',
         marginBottom: '2vh',
         backgroundColor: theme.palette.primary.main,
         opacity: .9,
@@ -19,6 +19,7 @@ export const FirstDescriptionCard = () => (
     }}>
         <Typography
             color={'white'}
+            variant='h6'
             sx={{
                 paddingLeft: '2%',
                 paddingRight: '2%'

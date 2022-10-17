@@ -15,20 +15,17 @@ export const Banner = () => {
             flexDirection: 'row',
             justifyContent: 'space-between',
             height: '15vh',
-            padding: '1vh',
             boxShadow: 3,
             opacity: .9
         }}>
-            <Avatar
-                alt="Olivier ARNAUD-BOUR"
-                src="/olivier.jpg"
-                sx={{
-                    width: '15vh',
-                    height: '15vh',
-                    boxShadow: 3,
-                    opacity: .9
-                }}
-            />
+            <Box sx={{
+                backgroundImage: 'url(olivier.png)',
+                backgroundPosition: 'left',
+                backgroundSize: 'contain',
+                backgroundRepeat: 'no-repeat',
+                height: '15vh',
+                width: '15vh'
+            }} />
             <Langs />
         </Box>
     );
