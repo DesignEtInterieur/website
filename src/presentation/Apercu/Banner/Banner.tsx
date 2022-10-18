@@ -1,4 +1,4 @@
-import { Avatar, Box } from '@mui/material';
+import { Box } from '@mui/material';
 import React from 'react';
 import { Langs } from '../../Langs';
 
