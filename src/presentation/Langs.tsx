@@ -9,7 +9,7 @@ export const availableLangs = [
     'en'
 ];
 
-export const TextContent = ({ textUrl }: { textUrl: string }) => {
+export const TextContent: React.FC<{ textUrl: string }> = ({ textUrl }) => {
     let { lang } = useParams<"lang">();
     const [textContent, setTextContent] = useState('');
 
@@ -20,7 +20,7 @@ export const TextContent = ({ textUrl }: { textUrl: string }) => {
     return <ReactMarkdown children={textContent} />;
 };
 
-export const Langs = () => {
+export const Langs: React.FC = () => {
     let { lang } = useParams<"lang">();
 
     if (!availableLangs.includes(lang ?? "no-lang"))

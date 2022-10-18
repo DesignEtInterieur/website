@@ -15,7 +15,7 @@ const slideImages = [
 ]
 
 
-export const Apercu = () => (
+export const Apercu: React.FC = () => (
     <Carousel
         className="carousel"
         stopAutoPlayOnHover={false}

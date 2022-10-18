@@ -2,7 +2,7 @@ import { Box } from '@mui/material';
 import React from 'react';
 import { Langs } from '../../Langs';
 
-export const Banner = () => {
+export const Banner: React.FC = () => {
 
     return (
         <Box sx={{

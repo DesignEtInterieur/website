@@ -5,7 +5,7 @@ import { theme } from "../../theme";
 import { TextContent } from "../Langs";
 
 
-export const FirstDescriptionCard = () => (
+export const FirstDescriptionCard: React.FC = () => (
     <Card sx={{
         alignSelf: 'center',
         width: '80vw',
