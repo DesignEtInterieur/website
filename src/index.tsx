@@ -2,6 +2,7 @@ import { ThemeProvider } from '@emotion/react';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { RouterProvider } from 'react-router-dom';
+import { ParallaxProvider } from 'react-scroll-parallax';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { router } from './router';
@@ -13,7 +14,9 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <ThemeProvider theme={theme} >
-      <RouterProvider router={router} />
+      <ParallaxProvider>
+        <RouterProvider router={router} />
+      </ParallaxProvider>
     </ThemeProvider>
   </React.StrictMode>
 );

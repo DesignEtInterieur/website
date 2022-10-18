@@ -3,6 +3,7 @@ import { Card, IconButton, Typography } from "@mui/material";
 import React from "react";
 import { theme } from "../../theme";
 import { TextContent } from "../Langs";
+import * as Scroll from 'react-scroll';
 
 
 export const FirstDescriptionCard: React.FC = () => (
@@ -24,14 +25,21 @@ export const FirstDescriptionCard: React.FC = () => (
                 paddingLeft: '2%',
                 paddingRight: '2%'
             }}>
-            <TextContent textUrl='intro' />
+            <TextContent textUrl='content/accueil' />
         </Typography>
         <IconButton
+            onClick={() => {
+                Scroll.scroller.scrollTo("secondpage", {
+                    duration: 1500,
+                    delay: 100,
+                    smooth: true
+                });
+            }}
             sx={{
                 alignSelf: 'center',
                 margin: '2%',
             }}>
-            <ExpandMore sx={{color: 'white'}} />
+            <ExpandMore sx={{ color: 'white' }} />
         </IconButton>
     </Card>
 )

@@ -14,7 +14,7 @@ export const TextContent: React.FC<{ textUrl: string }> = ({ textUrl }) => {
     const [textContent, setTextContent] = useState('');
 
     useEffect(() => {
-        fetch(`/texts/${textUrl}/${lang}.md`).then(res => res.text()).then(text => setTextContent(text))
+        fetch(`/${textUrl}/${lang}.md`).then(res => res.text()).then(text => setTextContent(text))
     });
 
     return <ReactMarkdown children={textContent} />;
