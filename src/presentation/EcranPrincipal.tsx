@@ -12,7 +12,8 @@ export const EcranPrincipal: React.FC = () => {
                 <Banner />
             </div>
             <Category category="archi" target="meuble" />
-            <Category category="meuble" />
+            <Category category="meuble" target="cinema" />
+            <Category category="cinema" />
         </Stack>
     )
 };
