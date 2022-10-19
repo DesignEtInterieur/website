@@ -1,31 +1,28 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
-import { useParallax } from "react-scroll-parallax";
 import { TextContent } from "../Langs";
 
 export const Category: React.FC<{ category: string, fontColor?: string }> = ({ category, fontColor = 'white' }) => {
-    const parallax = useParallax({
-        speed: -10,
-    });
     return (
         <Box
-            ref={parallax.ref}
             sx={{
-                backgroundImage: `url(content/${category}/images/${category}.jpg)`,
+                backgroundImage: `url(content/${category}/images/bg.jpg)`,
                 backgroundPosition: 'center',
                 backgroundSize: 'cover',
                 backgroundRepeat: 'no-repeat',
-                minHeight: '100vh'
+                minHeight: '120vh',
+                marginBottom: '7vh',
+                transform: 'skew(0deg, -8deg) translate(0, -50vh)'
             }}>
             <Typography
-
-                ref={parallax.ref}
                 color={fontColor}
                 variant='h6'
                 sx={{
                     paddingLeft: '10%',
                     paddingRight: '10%',
+                    transform: 'skew(0deg, 8deg) translate(0, 10vh)'
                 }}>
+                <div id={category} />
                 <TextContent textUrl={`content/${category}`} />
             </Typography>
         </Box>

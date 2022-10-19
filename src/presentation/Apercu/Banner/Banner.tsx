@@ -16,7 +16,9 @@ export const Banner: React.FC = () => {
             justifyContent: 'space-between',
             height: '15vh',
             boxShadow: 3,
-            opacity: .9
+            opacity: .9,
+            transform: 'translate(0, -120vh)',
+            zIndex: '1000'
         }}>
             <Box sx={{
                 backgroundImage: 'url(olivier.png)',

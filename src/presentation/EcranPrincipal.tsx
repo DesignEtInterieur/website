@@ -1,15 +1,19 @@
 import { Stack } from '@mui/material';
 import React from 'react';
 import { Apercu } from './Apercu';
-import { Interieur } from './Interieur';
+import { Banner } from './Apercu/Banner';
+import { FirstDescriptionCard } from './Apercu/FirstDescriptionCard';
+import { Category } from './Category';
 
 export const EcranPrincipal: React.FC = () => {
 
     return (
         <Stack spacing={0}>
             <Apercu />
-            <div id="secondpage" />
-            <Interieur />
+            <Banner />
+            <FirstDescriptionCard target="archi" />
+            <Category category="archi"  />
+            <Category category="meuble"  />
         </Stack>
     )
 };

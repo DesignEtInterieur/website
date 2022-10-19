@@ -1,8 +1,6 @@
 import React from 'react';
 import { Box } from '@mui/material';
 import Carousel from 'react-material-ui-carousel';
-import { Banner } from './Banner';
-import { FirstDescriptionCard } from './FirstDescriptionCard';
 
 const imagesAccueilPath = 'content/accueil/images';
 
@@ -20,7 +18,6 @@ const slideImages = [
 export const Apercu: React.FC = () => (
     <Carousel
         className="carousel"
-        animation='slide'
         stopAutoPlayOnHover={false}
         indicators={false}
         navButtonsAlwaysInvisible={true}>
@@ -30,13 +27,9 @@ export const Apercu: React.FC = () => (
                 backgroundPosition: 'center',
                 backgroundSize: 'cover',
                 width: '100vw',
-                height: '100vh',
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'space-between'
+                height: '120vh',
+                transform: 'skew(0deg, -8deg) translate(0, -10vh)'
             }}>
-                <Banner />
-                <FirstDescriptionCard />
             </Box>
         )}
     </Carousel>

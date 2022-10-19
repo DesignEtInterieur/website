@@ -6,17 +6,19 @@ import { TextContent } from "../Langs";
 import * as Scroll from 'react-scroll';
 
 
-export const FirstDescriptionCard: React.FC = () => (
+export const FirstDescriptionCard: React.FC<{target: string}> = ({target}) => (
     <Card sx={{
         alignSelf: 'center',
         width: '80vw',
-        minHeight: '30vh',
+        height: '30vh',
         marginBottom: '2vh',
         backgroundColor: theme.palette.primary.main,
         opacity: .9,
         display: 'flex',
         flexDirection: 'column',
-        justifyContent: 'space-between'
+        justifyContent: 'space-between',
+        transform: 'translate(0, -67vh)',
+        zIndex: '1000'
     }}>
         <Typography
             color={'white'}
@@ -29,7 +31,7 @@ export const FirstDescriptionCard: React.FC = () => (
         </Typography>
         <IconButton
             onClick={() => {
-                Scroll.scroller.scrollTo("secondpage", {
+                Scroll.scroller.scrollTo(target, {
                     duration: 1500,
                     delay: 100,
                     smooth: true
