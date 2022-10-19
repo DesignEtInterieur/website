@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box } from '@mui/material';
 import Carousel from 'react-material-ui-carousel';
+import { FirstDescriptionCard } from './FirstDescriptionCard';
 
 const imagesAccueilPath = 'content/accueil/images';
 
@@ -27,9 +28,11 @@ export const Apercu: React.FC = () => (
                 backgroundPosition: 'center',
                 backgroundSize: 'cover',
                 width: '100vw',
-                height: '120vh',
-                transform: 'skew(0deg, -8deg) translate(0, -10vh)'
+                height: '100vh',
+                display: 'flex',
+                flexDirection: 'column'
             }}>
+                <FirstDescriptionCard target="archi" />
             </Box>
         )}
     </Carousel>

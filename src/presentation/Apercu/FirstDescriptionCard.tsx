@@ -1,24 +1,25 @@
-import { ExpandMore } from "@mui/icons-material";
-import { Card, IconButton, Typography } from "@mui/material";
+import { Card, Typography } from "@mui/material";
 import React from "react";
 import { theme } from "../../theme";
 import { TextContent } from "../Langs";
-import * as Scroll from 'react-scroll';
+import { FramesNavigator } from "../Navigator";
 
 
-export const FirstDescriptionCard: React.FC<{target: string}> = ({target}) => (
+export const FirstDescriptionCard: React.FC<{ target?: string }> = ({ target }) => (
     <Card sx={{
         alignSelf: 'center',
+        verticalAlign: 'bottom',
         width: '80vw',
-        height: '30vh',
-        marginBottom: '2vh',
+        minHeight: '30vh',
+        marginLeft: '10vw',
+        marginRight: '10vw',
         backgroundColor: theme.palette.primary.main,
         opacity: .9,
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'space-between',
-        transform: 'translate(0, -67vh)',
-        zIndex: '1000'
+        position: 'absolute',
+        bottom: '2vh'
     }}>
         <Typography
             color={'white'}
@@ -29,19 +30,6 @@ export const FirstDescriptionCard: React.FC<{target: string}> = ({target}) => (
             }}>
             <TextContent textUrl='content/accueil' />
         </Typography>
-        <IconButton
-            onClick={() => {
-                Scroll.scroller.scrollTo(target, {
-                    duration: 1500,
-                    delay: 100,
-                    smooth: true
-                });
-            }}
-            sx={{
-                alignSelf: 'center',
-                margin: '2%',
-            }}>
-            <ExpandMore sx={{ color: 'white' }} />
-        </IconButton>
+        <FramesNavigator target={target} />
     </Card>
 )

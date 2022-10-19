@@ -14,3 +14,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.invisible {
+  height: 0;
+  z-index: 1000;
+  width: 100vw;
+}
