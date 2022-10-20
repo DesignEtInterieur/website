@@ -1,6 +1,6 @@
 import { Box } from '@mui/material';
 import React from 'react';
-import { Langs } from '../../Langs';
+import { Langs } from '../';
 
 export const Banner: React.FC = () => {
 

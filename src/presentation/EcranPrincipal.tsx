@@ -1,7 +1,6 @@
 import { Stack } from '@mui/material';
 import React from 'react';
-import { Apercu } from './Apercu';
-import { Banner } from './Apercu/Banner';
+import { Apercu, Banner } from './Apercu';
 import { Category } from './Category';
 
 export const EcranPrincipal: React.FC = () => {

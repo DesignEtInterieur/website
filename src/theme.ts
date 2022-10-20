@@ -11,6 +11,9 @@ const themeOptions: ThemeOptions = {
     },
   },
   typography: {
+    h1: {
+      lineHeight: 1.0
+    },
     h6: {
       fontSize: '1rem',
       '@media (min-width:1980px)': {

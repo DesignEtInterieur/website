@@ -1,8 +1,8 @@
 import { Card, Typography } from "@mui/material";
 import React from "react";
 import { theme } from "../../theme";
-import { TextContent } from "../Langs";
-import { FramesNavigator } from "../Navigator";
+import { TextContent } from "../";
+import { FramesNavigator } from "../";
 
 
 export const FirstDescriptionCard: React.FC<{ target?: string }> = ({ target }) => (

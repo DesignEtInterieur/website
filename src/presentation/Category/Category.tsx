@@ -2,7 +2,7 @@ import { Box, Card, Typography } from "@mui/material";
 import React from "react";
 import { theme } from "../../theme";
 import { TextContent } from "../Langs";
-import { FramesNavigator } from "../Navigator";
+import { FramesNavigator } from "../FramesNavigator";
 
 export const Category: React.FC<{ category: string, target?: string, fontColor?: string }> = (
     { category, target, fontColor = 'white' }) => {
@@ -11,7 +11,9 @@ export const Category: React.FC<{ category: string, target?: string, fontColor?:
         `url(content/${category}/images/preview-2.jpg)`,
         `url(content/${category}/images/preview-3.jpg)`,
         `url(content/${category}/images/preview-4.jpg)`
-    ]
+    ];
+
+    console.log(theme.typography.h1);
     return (
         <><div id={category} />
             <Box
@@ -35,12 +37,11 @@ export const Category: React.FC<{ category: string, target?: string, fontColor?:
                 <div className='invisible'>
                     <Typography
                         color={fontColor}
-                        variant='h6'
                         sx={{
                             textShadow: '1px 1px 2px black',
                             marginLeft: '8vw',
                             marginRight: '8vw',
-                            transform: 'translateY(-72vh)'
+                            transform: 'translateY(-74vh)'
                         }}>
 
                         <TextContent textUrl={`content/${category}`} />

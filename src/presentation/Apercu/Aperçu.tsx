@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box } from '@mui/material';
 import Carousel from 'react-material-ui-carousel';
-import { FirstDescriptionCard } from './FirstDescriptionCard';
+import { FirstDescriptionCard } from './';
 
 const imagesAccueilPath = 'content/accueil/images';
 
@@ -14,7 +14,6 @@ const slideImages = [
     `${imagesAccueilPath}/plan.jpeg`,
     `${imagesAccueilPath}/restaurant.jpeg`
 ]
-
 
 export const Apercu: React.FC = () => (
     <Carousel

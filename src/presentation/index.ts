@@ -1,2 +1,3 @@
 export { EcranPrincipal } from './EcranPrincipal';
-export { Langs } from './Langs';
+export { availableLangs, TextContent, Langs } from './Langs';
+export { FramesNavigator } from './FramesNavigator';
