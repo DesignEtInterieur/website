@@ -5,9 +5,9 @@ import { theme } from "../theme";
 import { IconButton, SxProps, Theme } from "@mui/material";
 
 
-export const FramesNavigator: React.FC<{ target?: string }> = ({ target }) => {
+export const FramesNavigator: React.FC<{ target?: string, align?: string }> = ({ target = null, align = 'center' }) => {
     const sx: SxProps<Theme> = {
-        alignSelf: 'center',
+        alignSelf: align,
         marginBottom: '10px',
         backgroundColor: theme.palette.primary.main
     };
