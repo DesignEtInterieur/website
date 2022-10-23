@@ -3,9 +3,10 @@ import React from "react";
 import plan from './plan.jpg';
 import logo from './logo.jpg';
 import photo from './photo-olivier.png';
-import { Typography } from "@mui/material";
-import { Card } from "./Card";
-import { Email, Home, Phone } from "@mui/icons-material";
+import { Typography, Card as MuiCard, Divider } from "@mui/material";
+import { Email, Facebook, Home, LinkedIn, Phone, Pinterest, Twitter } from "@mui/icons-material";
+import { theme } from "../theme";
+import { Span } from "./Span";
 
 export const Contact: React.FC<{ target?: string }> = ({ target }) => (
     <><div id="contact" />
@@ -23,26 +24,80 @@ export const Contact: React.FC<{ target?: string }> = ({ target }) => (
             alignItems: 'end'
 
         }}>
-            <Card
-                title="Paris et interniational"
-                label="6, avenue Delcassé, 75008 Paris"
-                icon={<Home />}
-            />
-            <Card
-                title="Région Nord / Belgique"
-                label="32b rue du Plouich, 59113 Seclin"
-                icon={<Home />}
-            />
-            <Card
-                title="Téléphone"
-                label="+33 6 14 09 94 27"
-                icon={<Phone />}
-            />
-            <Card
-                title="Email"
-                label="info@designetinterieur.fr"
-                icon={<Email />}
-            />
+            <MuiCard sx={{
+                backgroundColor: theme.palette.primary.main,
+                width: '25vw',
+                opacity: .9,
+                margin: '2vmin',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center'
+            }}>
+                <Span variant="h5">Discutons de votre projet</Span>
+                <Divider light />
+                <Box sx={{
+                    display: 'flex',
+                    flexDirection: 'row',
+                    justifyContent: 'space-between',
+                    alignContent: 'center',
+                    alignItems: 'center'
+                }}>
+                    <Span>6, avenue Delcassé, 75008 Paris</Span>
+                    <Span><Home /></Span>
+                </Box>
+                <Box sx={{
+                    display: 'flex',
+                    flexDirection: 'row',
+                    justifyContent: 'space-between',
+                    alignContent: 'center',
+                    alignItems: 'center'
+                }}>
+                    <Span>32b rue du Plouich, 59113 Seclin</Span>
+                    <Span><Home /></Span>
+                </Box>
+                <Box sx={{
+                    display: 'flex',
+                    flexDirection: 'row',
+                    justifyContent: 'space-between',
+                    alignContent: 'center',
+                    alignItems: 'center'
+                }}>
+                    <Span>+33 (0)6 14 09 94 27</Span>
+                    <Span><Phone /></Span>
+                </Box>
+                <Box sx={{
+                    display: 'flex',
+                    flexDirection: 'row',
+                    justifyContent: 'space-between',
+                    alignContent: 'center',
+                    alignItems: 'center'
+                }}>
+                    <Span>info@designetinterieur.fr</Span>
+                    <Span><Email /></Span>
+                </Box>
+            </MuiCard>
+            <Box sx={{
+                display: 'flex',
+                flexDirection: 'row',
+                justifyContent: 'center',
+                alignContent: 'center',
+                alignItems: 'center',
+                height: '10vh',
+                width: '25vw'
+            }}>
+                <a href="https://www.linkedin.com/in/olivier-arnaud-bour-55746011/" target="_blank" rel="noreferrer">
+                    <LinkedIn sx={{ width: '9vh', height: '9vh', color: '#0A66C2' }} />
+                </a>
+                <a href="https://www.facebook.com/olivier.arnaudbour/" target="_blank" rel="noreferrer">
+                    <Facebook sx={{ width: '9vh', height: '9vh', color: '#3b5998' }} />
+                </a>
+                <a href="https://www.pinterest.fr/frenchthx/" target="_blank" rel="noreferrer">
+                    <Pinterest sx={{ width: '9vh', height: '9vh', color: '#c8232c' }} />
+                </a>
+                <a href="https://twitter.com/frenchthx" target="_blank" rel="noreferrer">
+                    <Twitter sx={{ width: '9vh', height: '9vh', color: '#00acee' }} />
+                </a>
+            </Box>
         </Box>
         <div className='invisible'>
             <Box sx={{
@@ -65,7 +120,8 @@ export const Contact: React.FC<{ target?: string }> = ({ target }) => (
                 flexDirection: 'column',
                 justifyContent: 'space-between',
                 height: '100vh',
-                transform: 'translate(0, -100vh)'
+                transform: 'translate(0, -100vh)',
+                width: '50vw'
             }}>
                 <Typography
                     color={'black'}
