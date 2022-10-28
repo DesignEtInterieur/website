@@ -5,11 +5,11 @@ import logo from './logo.png';
 import photo from './photo-olivier.png';
 import { Typography, Card as MuiCard, Divider, useMediaQuery } from "@mui/material";
 import { Email, Facebook, Home, LinkedIn, Phone, Pinterest, Twitter } from "@mui/icons-material";
-import { theme } from "../theme";
 import { Span } from "./Span";
+import { MEDIA_QUERY, theme } from "..";
 
 export const Contact: React.FC<{ target?: string }> = ({ target }) => {
-    const mobile = useMediaQuery('only screen and (orientation: portrait) and (max-width : 320px)')
+    const mobile = useMediaQuery(MEDIA_QUERY)
     return (
         <><div id="contact" />
             <Box sx={{
@@ -21,7 +21,7 @@ export const Contact: React.FC<{ target?: string }> = ({ target }) => {
                 height: '100vh',
                 display: 'flex',
                 flexDirection: 'column',
-                justifyContent: 'center',
+                justifyContent: mobile ? 'flex-start' : 'center',
                 alignContent: 'flex-end',
                 alignItems: 'end'
 
@@ -85,7 +85,7 @@ export const Contact: React.FC<{ target?: string }> = ({ target }) => {
                     alignContent: 'center',
                     alignItems: 'center',
                     height: '10vh',
-                    width: '25vw'
+                    width: mobile ? '80vw' : '25vw',
                 }}>
                     <a href="https://www.linkedin.com/in/olivier-arnaud-bour-55746011/" target="_blank" rel="noreferrer">
                         <LinkedIn sx={{ width: '9vh', height: '9vh', color: '#0A66C2' }} />

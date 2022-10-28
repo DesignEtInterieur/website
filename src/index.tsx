@@ -8,6 +8,10 @@ import reportWebVitals from './reportWebVitals';
 import { router } from './router';
 import { theme } from './theme';
 
+export { theme };
+
+export const MEDIA_QUERY = 'only screen and (orientation: portrait) and (hover: none) and (pointer: coarse)'
+
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );

@@ -2,9 +2,10 @@ import { Box, Button, useMediaQuery } from '@mui/material';
 import React from 'react';
 import { Langs } from '../';
 import * as Scroll from 'react-scroll';
+import { MEDIA_QUERY } from '../..';
 
 export const Banner: React.FC = () => {
-    const mobile = useMediaQuery('only screen and (orientation: portrait) and (max-width : 320px)')
+    const mobile = useMediaQuery(MEDIA_QUERY)
     return (
         <Box sx={{
             backgroundImage: 'url(logo.png)',

@@ -1,8 +1,8 @@
 import { Box, Card, Typography, useMediaQuery } from "@mui/material";
 import React from "react";
-import { theme } from "../../theme";
 import { TextContent } from "../Langs";
 import { FramesNavigator } from "../FramesNavigator";
+import { MEDIA_QUERY } from "../..";
 
 export const Category: React.FC<{ category: string, target?: string, fontColor?: string }> = (
     { category, target, fontColor = 'white' }) => {
@@ -16,7 +16,7 @@ export const Category: React.FC<{ category: string, target?: string, fontColor?:
         `url(content/${category}/images/preview-1.jpg)`,
         `url(content/${category}/images/preview-2.jpg)`
     ];
-    const mobile = useMediaQuery('only screen and (orientation: portrait) and (max-width : 320px)')
+    const mobile = useMediaQuery(MEDIA_QUERY)
     return (
         <><div id={category} />
             <Box
@@ -32,35 +32,30 @@ export const Category: React.FC<{ category: string, target?: string, fontColor?:
                     alignItems: 'baseline'
                 }}>
                 <Card sx={{
-                    backgroundColor: theme.palette.primary.main,
-                    height: '60vh',
+                    backgroundColor: 'rgba(125, 103, 65, 0.6)',
+                    minHeight: '60vh',
                     width: '100vw',
-                    opacity: .6,
-                }} />
-                <div className='invisible'>
+                }}>
                     <Typography
                         color={fontColor}
                         sx={{
                             textShadow: '1px 1px 2px black',
                             marginLeft: '8vw',
                             marginRight: '8vw',
-                            transform: 'translateY(-74vh)'
+                            marginBottom: '20vh'
                         }}>
 
                         <TextContent textUrl={`content/${category}`} />
                     </Typography>
-                </div>
-                <div className='invisible'>
+                </Card>
                     <Box sx={{
                         height: '30vh',
                         width: '70vw',
-                        marginTop: '2vh',
-                        marginLeft: '15vw',
-                        marginRight: '15vw',
-                        transform: 'translateY(-32vh)',
+                        transform: 'translateY(-10vh)',
                         display: 'flex',
                         flexDirection: 'row',
                         justifyContent: 'space-between',
+                        alignSelf: 'center'
                     }}>
                         {mobile ?
                             previewMobile.map(link =>
@@ -70,8 +65,8 @@ export const Category: React.FC<{ category: string, target?: string, fontColor?:
                                     backgroundSize: 'cover',
                                     backgroundRepeat: 'no-repeat',
                                     backgroundColor: 'white',
-                                    height: '60vh',
-                                    width: '15vw',
+                                    height: '30vh',
+                                    width: '30vw',
                                     boxShadow: 5
                                 }} />
                             )
@@ -90,7 +85,6 @@ export const Category: React.FC<{ category: string, target?: string, fontColor?:
                             )}
 
                     </Box>
-                </div>
                 <FramesNavigator target={target} />
             </Box>
         </>
