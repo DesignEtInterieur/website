@@ -1,4 +1,4 @@
-import { Box, Card, Typography } from "@mui/material";
+import { Box, Card, Typography, useMediaQuery } from "@mui/material";
 import React from "react";
 import { theme } from "../../theme";
 import { TextContent } from "../Langs";
@@ -12,8 +12,11 @@ export const Category: React.FC<{ category: string, target?: string, fontColor?:
         `url(content/${category}/images/preview-3.jpg)`,
         `url(content/${category}/images/preview-4.jpg)`
     ];
-
-    console.log(theme.typography.h1);
+    const previewMobile = [
+        `url(content/${category}/images/preview-1.jpg)`,
+        `url(content/${category}/images/preview-2.jpg)`
+    ];
+    const mobile = useMediaQuery('only screen and (orientation: portrait) and (max-width : 320px)')
     return (
         <><div id={category} />
             <Box
@@ -59,18 +62,32 @@ export const Category: React.FC<{ category: string, target?: string, fontColor?:
                         flexDirection: 'row',
                         justifyContent: 'space-between',
                     }}>
-                        {preview.map(link =>
-                            <Card sx={{
-                                backgroundImage: link,
-                                backgroundPosition: 'center',
-                                backgroundSize: 'cover',
-                                backgroundRepeat: 'no-repeat',
-                                backgroundColor: 'white',
-                                height: '30vh',
-                                width: '15vw',
-                                boxShadow: 5
-                            }} />
-                        )}
+                        {mobile ?
+                            previewMobile.map(link =>
+                                <Card sx={{
+                                    backgroundImage: link,
+                                    backgroundPosition: 'center',
+                                    backgroundSize: 'cover',
+                                    backgroundRepeat: 'no-repeat',
+                                    backgroundColor: 'white',
+                                    height: '60vh',
+                                    width: '15vw',
+                                    boxShadow: 5
+                                }} />
+                            )
+
+                            : preview.map(link =>
+                                <Card sx={{
+                                    backgroundImage: link,
+                                    backgroundPosition: 'center',
+                                    backgroundSize: 'cover',
+                                    backgroundRepeat: 'no-repeat',
+                                    backgroundColor: 'white',
+                                    height: '30vh',
+                                    width: '15vw',
+                                    boxShadow: 5
+                                }} />
+                            )}
 
                     </Box>
                 </div>
