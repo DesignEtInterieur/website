@@ -1,7 +1,7 @@
 import { Box } from "@mui/system";
 import React from "react";
 import plan from './plan.jpg';
-import logo from './logo.jpg';
+import logo from './logo.png';
 import photo from './photo-olivier.png';
 import { Typography, Card as MuiCard, Divider } from "@mui/material";
 import { Email, Facebook, Home, LinkedIn, Phone, Pinterest, Twitter } from "@mui/icons-material";
@@ -128,11 +128,10 @@ export const Contact: React.FC<{ target?: string }> = ({ target }) => (
                     sx={{
                         paddingLeft: '2vw',
                         paddingTop: '5vh',
-                        fontFamily: 'Wrath Styles',
+                        fontFamily: "'Anger Styles'",
                         fontSize: '4rem',
                         textShadow: 'grey 1px 1px'
                     }}>
-                    Olivier ARNAUD-BOUR
                 </Typography>
                 <Box sx={{
                     backgroundImage: `url(${photo})`,

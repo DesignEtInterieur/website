@@ -6,13 +6,13 @@ import { FirstDescriptionCard } from './';
 const imagesAccueilPath = 'content/accueil/images';
 
 const slideImages = [
-    `${imagesAccueilPath}/meuble.jpeg`,
+    `${imagesAccueilPath}/meuble.jpg`,
     `${imagesAccueilPath}/3d.jpg`,
-    `${imagesAccueilPath}/archi.jpeg`,
-    `${imagesAccueilPath}/cinema.jpeg`,
+    `${imagesAccueilPath}/archi.jpg`,
+    `${imagesAccueilPath}/cinema.jpg`,
     `${imagesAccueilPath}/domotique.jpg`,
-    `${imagesAccueilPath}/plan.jpeg`,
-    `${imagesAccueilPath}/restaurant.jpeg`
+    `${imagesAccueilPath}/plan.jpg`,
+    `${imagesAccueilPath}/restaurant.jpg`
 ]
 
 export const Apercu: React.FC = () => (
