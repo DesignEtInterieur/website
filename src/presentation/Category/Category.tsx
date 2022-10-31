@@ -1,6 +1,6 @@
 import { Box, Card, Typography, useMediaQuery } from "@mui/material";
 import React from "react";
-import { TextContent } from "../Langs";
+import { TextContent } from "../../components/Langs";
 import { FramesNavigator } from "../FramesNavigator";
 import { MEDIA_QUERY } from "../..";
 
@@ -58,7 +58,7 @@ export const Category: React.FC<{ category: string, target?: string, fontColor?:
                         alignSelf: 'center'
                     }}>
                         {mobile ?
-                            previewMobile.map(link =>
+                            previewMobile.map((link, i) =>
                                 <Card sx={{
                                     backgroundImage: link,
                                     backgroundPosition: 'center',
@@ -68,10 +68,11 @@ export const Category: React.FC<{ category: string, target?: string, fontColor?:
                                     height: '30vh',
                                     width: '30vw',
                                     boxShadow: 5
-                                }} />
+                                }}
+                                key={`${category}_${i}`} />
                             )
 
-                            : preview.map(link =>
+                            : preview.map((link, i) =>
                                 <Card sx={{
                                     backgroundImage: link,
                                     backgroundPosition: 'center',
@@ -81,7 +82,8 @@ export const Category: React.FC<{ category: string, target?: string, fontColor?:
                                     height: '30vh',
                                     width: '15vw',
                                     boxShadow: 5
-                                }} />
+                                }}
+                                key={`${category}_${i}`} />
                             )}
 
                     </Box>

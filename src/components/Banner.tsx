@@ -1,10 +1,9 @@
 import { Box, Button, useMediaQuery } from '@mui/material';
 import React from 'react';
-import { Langs } from '../';
-import * as Scroll from 'react-scroll';
-import { MEDIA_QUERY } from '../..';
+import { Langs } from '../presentation';
+import { MEDIA_QUERY } from '..';
 
-export const Banner: React.FC = () => {
+export const Banner: React.FC<{ onClick? : () => void}> = ({ onClick = () => {}}) => {
     const mobile = useMediaQuery(MEDIA_QUERY)
     return (
         <Box sx={{
@@ -32,13 +31,7 @@ export const Banner: React.FC = () => {
                     width: '15vh',
                     marginLeft: '1vmin'
                 }}
-                    onClick={() => {
-                        Scroll.scroller.scrollTo('contact', {
-                            duration: 1500,
-                            delay: 100,
-                            smooth: true
-                        });
-                    }} />
+                    onClick={() => onClick()} />
             }
         </Box>
     );

@@ -17,6 +17,7 @@ const slideImages = [
 
 export const Apercu: React.FC = () => (
     <Carousel
+        key={`Carousel1`}
         className="carousel"
         stopAutoPlayOnHover={false}
         indicators={false}
@@ -30,8 +31,9 @@ export const Apercu: React.FC = () => (
                 height: '100vh',
                 display: 'flex',
                 flexDirection: 'column'
-            }}>
-                <FirstDescriptionCard target="archi" />
+            }}
+                key={`carousel_${i}`}>
+                <FirstDescriptionCard key={`fdc_${i}`} target="archi" />
             </Box>
         )}
     </Carousel>

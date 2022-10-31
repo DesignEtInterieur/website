@@ -36,7 +36,7 @@ export const Langs: React.FC = () => {
         }}>
             {
                 availableLangs.filter(t => t !== lang).map(item => (
-                    <Link to={`/${item}`}>
+                    <Link to={`/${item}`} key={item}>
                         <Avatar
                             alt={item}
                             src={`/lang/${item}.svg`}

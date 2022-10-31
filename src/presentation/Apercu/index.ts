@@ -1,3 +1,3 @@
 export { Apercu } from './Aperçu'; 
-export { Banner } from './Banner';
+export { Banner } from '../../components/Banner';
 export { FirstDescriptionCard } from './FirstDescriptionCard'

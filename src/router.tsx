@@ -13,6 +13,10 @@ export const router = createBrowserRouter([
         element: <EcranPrincipal />
     },
     {
+        path: "/:lang/projects",
+        element: <span>projets</span>
+    },
+    {
         path: "*",
         element: <Navigate to="/" replace />
     }
