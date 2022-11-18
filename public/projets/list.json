@@ -1,0 +1,123 @@
+{
+    "title": {
+        "en": "Our Projects",
+        "fr": "Nos projets"
+    },
+    "tags": [
+        {
+            "tag": "archi",
+            "title": {
+                "en": "Interior Architecture",
+                "fr": "Architecture d'Intérieur"
+            }
+        },
+        {
+            "tag": "meuble",
+            "title": {
+                "en": "Custom furniture",
+                "fr": "Mobilier et agencement sur mesure"
+            }
+        },
+        {
+            "tag": "cinema",
+            "title": {
+                "en": "Home Cinema",
+                "fr": "Cinéma dans votre intérieur"
+            }
+        },
+        {
+            "tag": "pro",
+            "title": {
+                "en": "Professionals",
+                "fr": "Professionnels"
+            }
+        }
+    ],
+    "projects": [
+        {
+            "title": {
+                "en": "Studio Lille",
+                "fr": "Studio Lille"
+            },
+            "path": "studio_lille",
+            "tags": [
+                "archi",
+                "meuble"
+            ],
+            "assets": [
+                {
+                    "tags": [
+                        "archi"
+                    ],
+                    "path": "archi/IMG_5972.jpeg"
+                },
+                {
+                    "tags": [
+                        "archi"
+                    ],
+                    "path": "archi/IMG_6022.jpeg"
+                },
+                {
+                    "tags": [
+                        "archi"
+                    ],
+                    "path": "archi/IMG_6025.jpeg"
+                },
+                {
+                    "tags": [
+                        "archi"
+                    ],
+                    "path": "archi/IMG_6028.jpeg"
+                },
+                {
+                    "tags": [
+                        "archi"
+                    ],
+                    "path": "archi/IMG_6030.jpeg"
+                },
+                {
+                    "tags": [
+                        "meuble"
+                    ],
+                    "path": "archi/IMG_3047.jpeg"
+                },
+                {
+                    "tags": [
+                        "meuble"
+                    ],
+                    "path": "archi/IMG_3103.jpeg"
+                },
+                {
+                    "tags": [
+                        "meuble"
+                    ],
+                    "path": "archi/IMG_3194.jpeg"
+                },
+                {
+                    "tags": [
+                        "meuble"
+                    ],
+                    "path": "archi/IMG_7673.jpeg"
+                },
+                {
+                    "tags": [
+                        "meuble"
+                    ],
+                    "path": "archi/IMG_7674.jpeg"
+                },
+                {
+                    "tags": [
+                        "meuble"
+                    ],
+                    "path": "archi/IMG_7675.jpeg"
+                },
+                {
+                    "tags": [
+                        "meuble"
+                    ],
+                    "path": "archi/IMG_7676.jpeg"
+                }
+            ]
+        }
+    ]
+}
