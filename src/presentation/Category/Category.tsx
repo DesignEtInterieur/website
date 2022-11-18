@@ -44,7 +44,6 @@ export const Category: React.FC<{ category: string, target?: string, fontColor?:
                             marginRight: '8vw',
                             marginBottom: '20vh'
                         }}>
-
                         <TextContent textUrl={`content/${category}`} />
                     </Typography>
                 </Card>

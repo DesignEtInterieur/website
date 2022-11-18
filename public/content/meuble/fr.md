@@ -1,6 +1,6 @@
 # Mobilier et agencement sur mesure
 
-*Le sur mesure : la solution idéale*
+> *Le sur mesure : la solution idéale*
 
 ---
 

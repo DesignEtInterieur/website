@@ -2,6 +2,7 @@
 import React from 'react';
 import { createBrowserRouter, Navigate } from "react-router-dom";
 import { EcranPrincipal } from './presentation';
+import { Projects } from './projets';
 
 export const router = createBrowserRouter([
     {
@@ -14,7 +15,7 @@ export const router = createBrowserRouter([
     },
     {
         path: "/:lang/projects",
-        element: <span>projets</span>
+        element: <Projects />
     },
     {
         path: "*",

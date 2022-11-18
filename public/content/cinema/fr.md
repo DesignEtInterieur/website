@@ -1,6 +1,6 @@
 # L'expérience du cinéma dans votre intérieur
 
->> *Une passion qui nous suit depuis 1996*
+> *Une passion qui nous suit depuis 1996*
 
 ---
 
