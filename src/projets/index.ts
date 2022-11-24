@@ -1,5 +1,3 @@
-import { Title } from "@mui/icons-material";
-
 export { Projects } from "./Projets";
 
 export type ProjectsList = {
@@ -21,7 +19,7 @@ export type Title = {
 }
 
 export const getText = function<T extends Title>(title: T, lang: String | undefined): String {
-    return (lang?.toLowerCase() ?? "fr" === "fr") ? title.fr : title.en;
+    return (lang?.toLowerCase() === "fr") ? title.fr : title.en;
 }
 
 export const getProjects = async () => {
